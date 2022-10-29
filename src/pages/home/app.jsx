@@ -1,33 +1,46 @@
 import React, { useState } from "react";
 import "./style.css";
 import Instagran from "./image/instagram.png";
-import Kwai from "./image/kwai.png";
+import Kwai from "./image/zap.png";
 import Tiktok from "./image/tiktok.png";
-import Usuario from "./image/leila.jpeg";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 import Lc from "./image/lc.gif";
-import Pfoto from "./image/leila1.jpeg";
-import Sfoto from "./image/leila2.jpeg";
-import Tfoto from "./image/leila3.jpeg";
-import Niver from "./image/niver.jpeg";
-
+import Cesar from "./image/cesar.jpeg";
+import Gitsafado from "./image/gitsafado.gif";
+//import Gitemogin from "./image/gitemogin.gif";
 import FormDialog from "../../components/app";
 
 export default function Home() {
   const [menu, setMenu] = useState(null);
   const [buttonLogin, setButtonLogin] = useState(false);
-  const [updateImages, setUpdateImages] = useState(Usuario);
-
-  function atualizarImagens() {
-    let objFotos = [Pfoto, Usuario, Sfoto, Tfoto, Niver];
+ // const [updateImages, setUpdateImages] = useState(Gitemogin);
+  
+  /*function atualizarImagens() {
+   
+    let objFotos = [
+      Gitemogin,
+      Gitsafado
+     
+    ];
 
      setInterval(() => {
-      let randomic = Math.floor(Math.random() * 5);
+      let randomic = Math.floor(Math.random() * 2);
       setUpdateImages(objFotos[randomic]);
+      setInterval(() => {
+        if(randomic===1){
+          setUpdateImages(objFotos[randomic]);
+        }
+        else{
+          setUpdateImages(objFotos[0]);
+        }
+        
+      }, 2000)
+     
     }, 2000);
-  }
+  }*/
+
   function botaoMenu() {
     if (menu) {
       setMenu(false);
@@ -48,7 +61,7 @@ export default function Home() {
 
   return (
     <div>
-      <div onLoad={atualizarImagens()} className="botao">
+      <div  className="botao">
         <button onClick={botaoMenu}>
           {menu ? <CloseIcon /> : <MenuIcon />}{" "}
         </button>
@@ -62,7 +75,7 @@ export default function Home() {
 
       {menu ? (
         <div className="aba">
-          <a href="mailto:carlateixeiraoficial@gmail.com.br?subject=Duvida - Divulgação de conteudo">
+          <a href="mailto:jhulio1522@gmail.com.br?subject=Duvida - Contato com o Grego">
             Email
           </a>
           <a href="/">Fotos</a>
@@ -77,21 +90,15 @@ export default function Home() {
         {buttonLogin ? <FormDialog /> : false}
 
         <div id="app">
-          <img
-            onClick={atualizarImagens}
-            id="usuario"
-            src={updateImages}
-            alt="leila"
-          />{" "}
-          <br /> <br />
-          <h1>Leila Carla</h1>
-          <p>Me acompanhem nas outras redes</p>
+          <img id="usuario" src={Cesar} alt="Cesar" /> <br /> <br />
+          <h1>Jhulio Cesar</h1>
+          <p>Acompanhem o Grego nas outras redes</p>
         </div>
-
+        <img id="emogin" src={Gitsafado} alt="" />
         <div className="acessoria">
           <a
             id="instagran"
-            href="https://www.instagram.com/_carla_diary/"
+            href="https://www.instagram.com/pretooh_1522/"
             target={"_blank"}
             rel={"noreferrer"}
           >
@@ -99,24 +106,24 @@ export default function Home() {
             Instagram
           </a>
           <a
-            id="kwai"
-            href="https://s.kw.ai/u/EE2AC3Bk"
+            id="zap"
+            href="https://api.whatsapp.com/send?phone=5577998345442&text=Olá Grego!%20"
             target={"_blank"}
             rel={"noreferrer"}
           >
             <img className="link" src={Kwai} alt="" />
-            Kwai
+            Whatsapp
           </a>
           <a
             id="tiktok"
-            href="http://tiktok.com/@leilla_c.t"
+            href="https://www.tiktok.com/@o_grego_?_t=8Wusxnx4NMb&_r=1"
             target={"_blank"}
             rel={"noreferrer"}
           >
             <img src={Tiktok} className="link" alt="" /> Tiktok
           </a>
         </div>
-        <h2 id="nomeUsuario">@_carla_diary</h2>
+        <h2 id="nomeUsuario">@pretooh_1522</h2>
       </div>
     </div>
   );

@@ -2,12 +2,10 @@
 
 * {
     margin: 0 auto;
-    font-family: 'Righteous', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 0;
 }
-body{
-    background-color: #051842;
-}
+
 .home {
     /*background-color: rgb(97, 82, 116);*/
     text-align: center;
@@ -36,6 +34,14 @@ body{
 #gif {
     width: 100px;
     height: 100px;
+}
+#gif {
+    width: 100px;
+    height: 100px;
+}
+#emogin {
+    width: 18%;
+
 }
 
 #le {
@@ -109,10 +115,10 @@ a {
 
 }
 
-#kwai {
-    padding-right: 150px;
+#zap {
+    padding-right: 95px;
 
-    background-color: rgb(221, 94, 20);
+    background-color: #2CA70B;
 }
 
 #instagran {
